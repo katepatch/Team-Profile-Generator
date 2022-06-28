@@ -1,50 +1,50 @@
 //This line keeps auto popping up i don't know what to do about it.
-const { default: test } = require('node:test');
+//const { default: test } = require('node:test');
 const Employee = require('../lib/Employee');
 
 test('Employee class', () => {
-        const employee = new Employee();
+        const testEmployee = new Employee();
         expect(typeof(employee)).toBe('object');
     });
 
 test('name', () => {
-    const name = "Penny";
-    const employee = new Employee(name);
-    expect(employee.name).toBe(name);
+    const testName = "Penny";
+    const employee = new Employee(testName);
+    expect(employee.name).toBe(testName);
 });
 
 test('id', () => {
-    const id = 3;
-    const employee = new Employee(id);
-    expect(employee.id).toBe(id);
+    const testId = 3;
+    const employee = new Employee("Foo", testId);
+    expect(employee.id).toBe(testId);
 });
 
 test('email', () => {
-    const email = "fake123@fakermail.gov";
-    const employee = new Employee(email);
-    expect(employee.email).toBe(email);
+    const testEmail = "fake123@fakermail.gov";
+    const employee = new Employee("Foo", 3, testEmail);
+    expect(employee.email).toBe(testEmail);
 });
 
 test('getName returns name', () => {
-    const getName = "Penny";
-    const employee = new Employee(getName);
-    expect(employee.getName).toBe(getName);
+    const testGetName = "Penny";
+    const employee = new Employee(testGetName);
+    expect(employee.getName()).toBe(testGetName);
 });
 
 test('getId returns id', () => {
-    const getId = 3;
-    const employee = new Employee(getId);
-    expect(employee.getId).toBe(getId);
+    const testGetId = 3;
+    const employee = new Employee("Foo", testGetId);
+    expect(employee.getId()).toBe(testGetId);
 });
 
 test('getEmail returns email', () => {
-    const getEmail = "fake123@fakermail.gov"
-    const employee = new Employee(getEmail);
-    expect(employee.getEmail).toBe(getEmail);
+    const testGetEmail = "fake123@fakermail.gov"
+    const employee = new Employee("Foo", 3, testGetEmail);
+    expect(employee.getEmail()).toBe(testGetEmail);
 });
 
 test('getRole returns role of employee', () => {
     const testRole = "Employee";
-    const employee = new Employee();
-    expect(employee.getRole).toBe(testRole);
+    const employee = new Employee("Penny", 3, "fake123@fakermail.gov");
+    expect(employee.getRole()).toBe(testRole);
 });
