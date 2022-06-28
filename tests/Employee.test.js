@@ -24,3 +24,27 @@ test('email', () => {
     const employee = new Employee(email);
     expect(employee.email).toBe(email);
 });
+
+test('getName returns name', () => {
+    const getName = "Penny";
+    const employee = new Employee(getName);
+    expect(employee.getName).toBe(getName);
+});
+
+test('getId returns id', () => {
+    const getId = 3;
+    const employee = new Employee(getId);
+    expect(employee.getId).toBe(getId);
+});
+
+test('getEmail returns email', () => {
+    const getEmail = "fake123@fakermail.gov"
+    const employee = new Employee(getEmail);
+    expect(employee.getEmail).toBe(getEmail);
+});
+
+test('getRole returns role of employee', () => {
+    const testRole = "Employee";
+    const employee = new Employee();
+    expect(employee.getRole).toBe(testRole);
+});
