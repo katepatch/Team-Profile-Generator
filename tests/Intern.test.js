@@ -1,5 +1,6 @@
-const { exportAllDeclaration } = require('@babel/types');
-const { default: test } = require('node:test');
+//I don't know how these autopopulated
+// const { exportAllDeclaration } = require('@babel/types');
+// const { default: test } = require('node:test');
 const Intern = require('../lib/Intern');
 
 test('school', () => {
