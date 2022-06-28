@@ -4,5 +4,27 @@
   },
   "devDependencies": {
     "jest": "^28.1.1"
-  }
+  },
+  "name": "team-profile-generator",
+  "description": "## USER STORY",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katepatch/Team-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katepatch/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/katepatch/Team-Profile-Generator#readme"
 }
