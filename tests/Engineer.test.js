@@ -8,9 +8,9 @@ test('github', () => {
 });
 
 test('getGithub returns username', () => {
-    const testGetGithub = "Github Name";
-    const engineer = new Engineer("Foo", 3, "fake123@fakermail.gov", testGetGithub);
-    expect(engineer.getGithub()).toBe(testGetGithub);
+    const testGithub = "Github Name";
+    const engineer = new Engineer("Foo", 3, "fake123@fakermail.gov", testGithub);
+    expect(engineer.getGithub()).toBe(testGithub);
 });
 
 test('getRole returns new role', () => {
