@@ -19,7 +19,7 @@ test('id', () => {
     expect(employee.id).toBe(id);
 });
 
-test('email' () => {
+test('email', () => {
     const email = "fake123@fakermail.gov";
     const employee = new Employee(email);
     expect(employee.email).toBe(email);
