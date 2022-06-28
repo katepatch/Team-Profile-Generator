@@ -1,5 +1,6 @@
 //const { default: test } = require("node:test");
 const Engineer = require("../lib/Engineer");
+const Employee = require('../lib/Employee');
 
 test('github', () => {
     const testGithub = "Github Name";

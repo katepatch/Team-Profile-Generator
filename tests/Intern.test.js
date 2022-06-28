@@ -2,6 +2,7 @@
 // const { exportAllDeclaration } = require('@babel/types');
 // const { default: test } = require('node:test');
 const Intern = require('../lib/Intern');
+const Employee = require('../lib/Employee');
 
 test('school', () => {
     const testSchool = "Cool School";
