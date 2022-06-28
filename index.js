@@ -5,5 +5,30 @@ const Manager = require('./lib/Manager');
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const employee = new Employee();
+const questions = [
+    {
+        type: 'input',
+        name: 'name',
+        message: 'Employee Name',
+    },
+    {
+        type: 'input',
+        name: 'id number',
+        message: 'Employee ID number',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter Employee email',
+    },
+    {
+        type: 'list',
+        name: 'Employee Role',
+        message: 'What is the role of this employee?',
+        choices: ['Manager', 'Engineer', 'Intern'],
+        filter(val) {
+            return val.toLowerCase();
+        },
+    },
+]
 
