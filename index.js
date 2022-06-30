@@ -1,2 +1,2 @@
-const Team = require('../lib/Team');
+const Team = import('../lib/Team');
 
