@@ -9,7 +9,7 @@
   "description": "## USER STORY",
   "version": "8.2.4",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "directories": {
     "lib": "lib",
     "test": "tests"
