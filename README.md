@@ -1,7 +1,5 @@
 # Team Profile Generator
 
-## Description
-
 Module 10 Challenge
 
 ## USER STORY
