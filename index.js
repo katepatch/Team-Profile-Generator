@@ -19,12 +19,12 @@ const promptQuestions = () => {
         {
             type: "input",
             name: "Name",
-            messasge: "What is the manager's name?",
+            messasge: "What is the employee's name?",
             validate: nameInput => {
                 if (nameInput) {
                     return true;
                 } else {
-                    console.log("please enter manager's name");
+                    console.log("please enter employee's name");
                     return false;
                     }
             }
@@ -33,10 +33,10 @@ const promptQuestions = () => {
         {
             type: "input",
             name: "id",
-            message: "Please enter Manager's ID",
+            message: "Please enter employee's ID",
             validate: ID => {
                 if (isNaN(ID)) {
-                    console.log("Please enter Manager ID");
+                    console.log("Please enter employee ID");
                     return false;
                 } else {
                     return true;
@@ -46,12 +46,12 @@ const promptQuestions = () => {
         {
             type: "input",
             name: "email",
-            message: "What is the manager's email?",
+            message: "What is the employee's email?",
             validate: emailInput => {
                 if (emailInput) {
                     return true;
                 } else {
-                    console.log("Please enter manager's email");
+                    console.log("Please enter employee's email");
                     return false;
                 }
             }
@@ -60,6 +60,7 @@ const promptQuestions = () => {
             type: "input",
             name: "officeNumber",
             message: "What is the Manager's office number?",
+            when: (input) => input.role === "Manager",
             validate: phoneInput => {
                 if (phoneInput) {
                     return true;
