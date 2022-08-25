@@ -55,8 +55,28 @@ const promptQuestions = () => {
                     return false;
                 }
             }
-        }
+        },
+        {
+            type: "input",
+            name: "officeNumber",
+            message: "What is the Manager's office number?",
+            validate: phoneInput => {
+                if (phoneInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the manger's number");
+                    return false;
+                }
+            }
+        },
     ])
+    .then(managerInfo => {
+        const {name, email, id, officeNumber} = managerInfo;
+        const manager = new Manager (name, email, id, officeNumber);
+
+        teamMembers.push(manager);
+        console.log(manager);
+    })
 }
 
 // class Team {
@@ -305,3 +325,5 @@ const promptQuestions = () => {
 //    }
 
 //    createTeam();
+
+promptQuestions();
