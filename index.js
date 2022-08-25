@@ -70,10 +70,53 @@ const promptQuestions = () => {
                 }
             }
         },
+        {
+            type: "input",
+            name: "github",
+            message: "Please provide the engineer's github username",
+            when: (input) => input.role === "Engineer",
+            validate: githubInput => {
+                if (githubInput) {
+                    return true;
+                } else {
+                    console.log("Please provide the engineer's github username");
+                    return false;
+                }
+            }
+        },
+        {
+            type: "input",
+            name: "school",
+            message: "Where is your intern currently enrolled?",
+            when: (input) => input.role === "Intern",
+            validate: schoolInput => {
+                if (schoolInput) {
+                    return true;
+                } else {
+                    console.log("Please enter intern's school");
+                    return false;
+                }
+            }
+        },
+        {
+            type: "confirm",
+            name: "addEmployee",
+            message: "Would you like to add another employee?",
+            default: false
+        }
     ])
-    .then(managerInfo => {
-        const {name, email, id, officeNumber} = managerInfo;
-        const manager = new Manager (name, email, id, officeNumber);
+    .then(employeeInfo => {
+        const {name, email, id, officeNumber, github, school addEmployee} = employeeInfo;
+        let employee = employeeInfo;
+
+        if (role === "Manager") {
+            employee = new Manager(name, email, id, officeNumber);
+            console.log(employee);
+        }
+        else if (role === "Engineer") {
+            employee = new Engineer(name, email, id, github)
+            console.log(employee);
+        }
 
         teamMembers.push(manager);
         console.log(manager);
