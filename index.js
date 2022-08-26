@@ -117,11 +117,22 @@ const promptQuestions = () => {
             employee = new Engineer(name, email, id, github)
             console.log(employee);
         }
+        else if (role === "Intern") {
+            employee = new Intern(name, email, id, school);
+            console.log(employee);
+        }
 
-        teamMembers.push(manager);
-        console.log(manager);
+        teamMembers.push(employee);
+        console.log(employee);
+
+        if (addEmployee) {
+            return promptQuestions(teamMembers);
+        } else {
+            console.log(teamMembers)
+            return teamMembers;
+        }
     })
-}
+};
 
 // class Team {
 //     constructor(manager, engineer, intern) {
