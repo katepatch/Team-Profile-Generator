@@ -134,6 +134,27 @@ const promptQuestions = () => {
     })
 };
 
+function writeToFile(data) {
+    fs.writeFile("./dist/index.html", data, err => {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("team created");
+    });
+}
+
+promptQuestions()
+    .then(teamMembers => {
+        return htmlRenderer(teamMembers);
+    })
+    .then(pageHTML => {
+        return writeToFile(pageHTML);
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
+
 // class Team {
 //     constructor(manager, engineer, intern) {
 //         this.manager = manager;
@@ -381,4 +402,4 @@ const promptQuestions = () => {
 
 //    createTeam();
 
-promptQuestions();
+
