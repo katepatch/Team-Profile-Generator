@@ -28,7 +28,6 @@ const promptQuestions = () => {
                     return false;
                     }
             }
-
         },
         {
             type: "input",
