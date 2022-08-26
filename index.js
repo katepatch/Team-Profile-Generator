@@ -4,7 +4,7 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 const inquirer = require('inquirer');
 const fs = require('fs');
-const htmlRenderer = require('../src/htmlRenderer')
+const htmlRenderer = require('./src/htmlRenderer.js')
 
 const teamMembers = [];
 
@@ -106,7 +106,7 @@ const promptQuestions = () => {
         }
     ])
     .then(employeeInfo => {
-        const {name, email, id, officeNumber, github, school addEmployee} = employeeInfo;
+        const {name, email, id, officeNumber, github, school, addEmployee} = employeeInfo;
         let employee = employeeInfo;
 
         if (role === "Manager") {
