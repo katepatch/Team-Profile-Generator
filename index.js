@@ -108,7 +108,7 @@ const promptQuestions = () => {
         const {name, email, id, officeNumber, github, school, addEmployee} = employeeInfo;
         let employee = employeeInfo;
 
-        if (role === "Manager") {
+        if (role === "Manager") { //role is not defined error?
             employee = new Manager(name, email, id, officeNumber);
             console.log(employee);
         }
