@@ -31,3 +31,20 @@ const genEngineer = engineer => {
         </div>
     `
 }
+
+const genIntern = intern => {
+    return `
+        <div class="intern">
+            <h2>${intern.name}</h2>
+            <h3>Intern</h3>
+        </div>
+
+        <div class="intern-info">
+            <ul class="intern-list">
+                <li>ID: ${intern.id}</li>
+                <li>Email: ${intern.email}</li>
+                <li>School: ${intern.school}</li>
+            </ul>
+        </div>
+    `
+}
