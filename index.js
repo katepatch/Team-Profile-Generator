@@ -8,6 +8,8 @@ const htmlRenderer = require('./src/htmlRenderer.js')
 
 const teamMembers = [];
 
+const role = ""
+
 const promptQuestions = () => {
     return inquirer.prompt([
         {
@@ -108,7 +110,7 @@ const promptQuestions = () => {
         const {name, email, id, officeNumber, github, school, addEmployee} = employeeInfo;
         let employee = employeeInfo;
 
-        if (role === "Manager") { //role is not defined error?
+        if (role === "Manager") {
             employee = new Manager(name, email, id, officeNumber);
             console.log(employee);
         }
