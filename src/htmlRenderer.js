@@ -1,4 +1,4 @@
-const genManager = manager => {
+aconst genManager = manager => {
     return `
         <div class="manager">
             <h2>${manager.name}</h2>
@@ -8,7 +8,7 @@ const genManager = manager => {
         <div class="manager-info">
             <ul class="manager-list">
                 <li>ID: ${manager.id}</li>
-                <li>Email: ${manager.email}</li>
+                <li>Email: <a href="mailto:{{ email }}>${manager.email}</a></li>
                 <li>Office Number: ${manager.officeNumber}</li>
             </ul>
         </div>
@@ -25,8 +25,8 @@ const genEngineer = engineer => {
         <div class="engineer-info">
             <ul class="engineer-list">
                 <li>ID: ${engineer.id}</li>
-                <li>Email: ${engineer.email}</li>
-                <li>Github Username: ${engineer.github}</li>
+                <li>Email: <a herf="mailto:{{ email }}>${engineer.email}</a></li>
+                <li>Github Username: <a href="https://github.com//{{ github }}" target="_blank">${engineer.github}</a></li>
             </ul>
         </div>
     `
@@ -42,7 +42,7 @@ const genIntern = intern => {
         <div class="intern-info">
             <ul class="intern-list">
                 <li>ID: ${intern.id}</li>
-                <li>Email: ${intern.email}</li>
+                <li>Email: <a herf="mailto:{{ email }}>${intern.email}</a></li>
                 <li>School: ${intern.school}</li>
             </ul>
         </div>
