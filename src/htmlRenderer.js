@@ -1,4 +1,4 @@
-aconst genManager = manager => {
+const genManager = manager => {
     return `
         <div class="manager">
             <h2>${manager.name}</h2>
