@@ -1,11 +1,13 @@
 const genManager = manager => {
     return `
-        <div class="manager">
-            <h2>${manager.name}</h2>
-            <h3>Manager</h3>
+        <div class="card manager-card">
+            <div class="card-header>
+                <h2>${manager.name}</h2>
+                <h3>Manager</h3>
+            </div>
         </div>
 
-        <div class="manager-info">
+        <div class="card-body manager-info">
             <ul class="manager-list">
                 <li>ID: ${manager.id}</li>
                 <li>Email: <a href="mailto:{{ email }}>${manager.email}</a></li>
@@ -17,12 +19,14 @@ const genManager = manager => {
 
 const genEngineer = engineer => {
     return `
-        <div class="engineer">
-            <h2>${engineer.name}</h2>
-            <h3>Engineer</h3>
+        <div class="card engineer">
+            <div class="card-header">
+                <h2>${engineer.name}</h2>
+                <h3>Engineer</h3>
+            </div>
         </div>
 
-        <div class="engineer-info">
+        <div class="card-body engineer-info">
             <ul class="engineer-list">
                 <li>ID: ${engineer.id}</li>
                 <li>Email: <a herf="mailto:{{ email }}>${engineer.email}</a></li>
@@ -34,12 +38,14 @@ const genEngineer = engineer => {
 
 const genIntern = intern => {
     return `
-        <div class="intern">
-            <h2>${intern.name}</h2>
-            <h3>Intern</h3>
+        <div class="card intern">
+            <div class="card-header>
+                <h2>${intern.name}</h2>
+                <h3>Intern</h3>
+            </div>
         </div>
 
-        <div class="intern-info">
+        <div class="card-body intern-info">
             <ul class="intern-list">
                 <li>ID: ${intern.id}</li>
                 <li>Email: <a herf="mailto:{{ email }}>${intern.email}</a></li>
