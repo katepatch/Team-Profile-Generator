@@ -62,6 +62,11 @@ renderPage = data => {
 
             teamCards.push(managerCard);
         }
-        
+
+        if (role === "Engineer") {
+            const engineerCard = genEngineer(employee);
+
+            teamCards.push(engineerCard);
+        }
     }
 }
