@@ -48,3 +48,20 @@ const genIntern = intern => {
         </div>
     `
 }
+
+renderPage = data => {
+    teamCards = [];
+
+    for (let i = 0; i < data.length; i ++) {
+        const employee = data[i];
+        const role = employee.getRole();
+        console.log(role);
+
+        if (role === "Manager") {
+            const managerCard = genManager(employee);
+
+            teamCards.push(managerCard);
+        }
+        
+    }
+}
