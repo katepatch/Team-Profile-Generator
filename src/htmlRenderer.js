@@ -50,7 +50,7 @@ const genIntern = intern => {
 }
 
 renderPage = data => {
-    teamCards = [];
+    teamCardsArr = [];
 
     for (let i = 0; i < data.length; i ++) {
         const employee = data[i];
@@ -75,4 +75,9 @@ renderPage = data => {
             teamCards.push(internCard);
         }
     }
+
+    const teamCards = teamCardsArr.join("");
+
+    const renderTeam = createTeamHtml(teamCards);
+    return renderTeam;
 }
