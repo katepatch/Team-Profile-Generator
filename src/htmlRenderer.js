@@ -68,5 +68,11 @@ renderPage = data => {
 
             teamCards.push(engineerCard);
         }
+
+        if (role === "Intern") {
+            const internCard = genIntern(employee);
+
+            teamCards.push(internCard);
+        }
     }
 }
