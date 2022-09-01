@@ -82,7 +82,7 @@ htmlRenderer = data => {
         }
     }
 
-    const teamCards = teamCardsArr.join("");
+    const teamCards = teamCardsArr.join('');
 
     const renderTeam = createTeamHtml(teamCards);
     return renderTeam;
