@@ -2,6 +2,13 @@
 
 Module 10 Challenge
 
+## Table of Contents
+
+-[User Story](#user-story)</br>
+-[Acceptance Criteria](#acceptance-criteria)</br>
+-[Tests](#tests)</br>
+-[Links](#links)
+
 ## USER STORY
 
 AS A manager</br>
@@ -27,3 +34,14 @@ WHEN I select the intern option</br>
 THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu</br>
 WHEN I decide to finish building my team</br>
 THEN I exit the application, and the HTML is generated
+
+## Tests
+
+Run `npm test` to run Jest
+
+After the tests have passed you can run `node index.js` in the command line to start
+
+## Links
+
+You can find my code on my [Github](https://github.com/katepatch/Team-Profile-Generator)</br>
+You can email me at kate.epatch@gmail.com
