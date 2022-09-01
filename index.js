@@ -4,7 +4,7 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 const inquirer = require('inquirer');
 const fs = require('fs');
-const htmlRenderer = require('./src/htmlRenderer.js')
+const htmlRenderer = require('./src/htmlRenderer')
 
 const teamMembers = [];
 
