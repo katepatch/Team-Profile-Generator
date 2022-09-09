@@ -38,7 +38,7 @@ const genEngineer = engineer => {
 const genIntern = intern => {
     return `
         <div class="card intern">
-            <div class="card-header>
+            <div class="card-header">
                 <h2>${intern.getName()}</h2>
                 <h3>Intern</h3>
             </div>
