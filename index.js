@@ -20,7 +20,7 @@ const promptQuestions = () => {
         },
         {
             type: "input",
-            name: "Name",
+            name: "name",
             messasge: "What is the employee's name?",
             validate: nameInput => {
                 if (nameInput) {
@@ -107,36 +107,39 @@ const promptQuestions = () => {
         }
     ])
     .then(employeeInfo => {
-        const {name, email, id, officeNumber, github, school, addEmployee} = employeeInfo;
-        let employee = employeeInfo;
+        const {role, name, id, email, officeNumber, github, school, addEmployee} = employeeInfo;
+        //let employee = employeeInfo;
 
         if (role === "Manager") {
-            employee = new Manager(name, email, id, officeNumber);
-            console.log(employee);
+            const manager = new Manager(name, id, email, officeNumber);
+            teamMembers.push(manager);
+            console.log(manager);
         }
         else if (role === "Engineer") {
-            employee = new Engineer(name, email, id, github)
-            console.log(employee);
+            const engineer = new Engineer(name, id, email, github)
+            teamMembers.push(engineer);
+            //console.log(employee);
         }
         else if (role === "Intern") {
-            employee = new Intern(name, email, id, school);
-            console.log(employee);
+            const intern = new Intern(name, id, email, school);
+            teamMembers.push(intern);
+            //console.log(employee);
         }
 
-        teamMembers.push(employee);
-        console.log(employee);
+        //teamMembers.push(employee);
+        //console.log(employee);
 
         if (addEmployee) {
-            return promptQuestions(teamMembers);
+            return promptQuestions();
         } else {
             console.log(teamMembers)
-            return teamMembers;
+            writeToFile()
         }
     })
 };
 
-function writeToFile(data) {
-    fs.writeFile("./dist/index.html", data, err => {
+function writeToFile() {
+    fs.writeFile("./dist/index.html", htmlRenderer (teamMembers), err => {
         if (err) {
             return console.log(err);
         }
@@ -145,15 +148,15 @@ function writeToFile(data) {
 }
 
 promptQuestions()
-    .then(teamMembers => {
-        return htmlRenderer(teamMembers);
-    })
-    .then(pageHTML => {
-        return writeToFile(pageHTML);
-    })
-    .catch(err => {
-        console.log(err)
-    })
+    // .then(teamMembers => {
+    //     return htmlRenderer(teamMembers);
+    // })
+    // .then(pageHTML => {
+    //     return writeToFile(pageHTML);
+    // })
+    // .catch(err => {
+    //     console.log(err)
+    // })
 
 
 // class Team {

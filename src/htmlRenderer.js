@@ -1,18 +1,17 @@
 const genManager = manager => {
     return `
         <div class="card manager-card">
-            <div class="card-header>
+            <div class="card-header">
                 <h2>${manager.name}</h2>
                 <h3>Manager</h3>
-            </div>
-        </div>
-
+            </div>        
         <div class="card-body manager-info">
             <ul class="manager-list">
                 <li>ID: ${manager.id}</li>
-                <li>Email: <a href="mailto:{{ email }}>${manager.email}</a></li>
+                <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
                 <li>Office Number: ${manager.officeNumber}</li>
             </ul>
+        </div>
         </div>
     `
 }
@@ -56,12 +55,14 @@ const genIntern = intern => {
 }
 
 htmlRenderer = data => {
-    teamCardsArr = [];
+    let teamCards = [];
 
     for (let i = 0; i < data.length; i ++) {
+        console.log(data[i].getRole());
         const employee = data[i];
+        console.log(data[i]);
         const role = employee.getRole(); //this is not a function error
-        console.log(role);
+        
 
         if (role === "Manager") {
             const managerCard = genManager(employee);
@@ -82,7 +83,7 @@ htmlRenderer = data => {
         }
     }
 
-    const teamCards = teamCardsArr.join('');
+    teamCards = teamCards.join('');
 
     const renderTeam = createTeamHtml(teamCards);
     return renderTeam;
