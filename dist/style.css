@@ -1,0 +1,24 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+}
+
+.card-header {
+    background-color: #828582;
+    color: white;
+}
+
+.container {
+    margin: 100px auto;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.card-body {
+    list-style: none;
+    
+}

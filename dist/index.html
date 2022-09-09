@@ -5,6 +5,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
         <title>Employee Profiles</title>
     </head>
     <body>
@@ -12,52 +16,52 @@
             <h1>Team Members</h1>
         </header>
     
-        <section>
-            
-        <div class="card manager-card">
-            <div class="card-header">
-                <h2>Sammy</h2>
-                <h3>Manager</h3>
-            </div>        
-        <div class="card-body manager-info">
-            <ul class="manager-list">
-                <li>ID: 1</li>
-                <li>Email: <a href="mailto:sammy@company.com">sammy@company.com</a></li>
-                <li>Office Number: 1234567890</li>
-            </ul>
-        </div>
-        </div>
-    
-        <div class="card engineer">
-            <div class="card-header">
-                <h2>Blake</h2>
-                <h3>Engineer</h3>
+        <section class="container">
+            <div class="flex-row flex-wrap justify-content-center">
+                
+        <div class="col-4 mt-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h2>Barb</h2>
+                    <h3>Manager</h3><i class="material-icons">&#128203;</i>
+                </div> 
+            </div>
+            <div class="card-body manager-info">
+                <p>ID: 5</p>
+                <p>Email: <a href="mailto:barb@company.org">barb@company.org</a></p>
+                <p>Office Number: 555-123-9870</p>
             </div>
         </div>
-
-        <div class="card-body engineer-info">
-            <ul class="engineer-list">
-                <li>ID: 5</li>
-                <li>Email: <a href="mailto:blake@company.com">blake@company.com</a></li>
-                <li>Github Username: <a href="https://github.com//{{ github }}" target="_blank">blakehub</a></li>
-            </ul>
-        </div>
     
-        <div class="card intern">
-            <div class="card-header">
-                <h2>Robin</h2>
-                <h3>Intern</h3>
+        <div class="col-4 mt-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h2>Shawn</h2>
+                    <h3>Engineer</h3><i class="material_icons">&#128187;</i>
+                </div>
+            </div>
+            <div class="card-body engineer-info">
+                <p>ID: 7</p>
+                <p>Email: <a href="mailto:shawn@company.org">shawn@company.org</a></p>
+                <p>Github Username: <a href="https://github.com//{{ github }}" target="_blank">shawnhub</a></p>
             </div>
         </div>
-
-        <div class="card-body intern-info">
-            <ul class="intern-list">
-                <li>ID: 7</li>
-                <li>Email: <a href="mailto:robin@company.com">robin@company.com</a></li>
-                <li>School: school name</li>
-            </ul>
+    
+        <div class="col-4 mt-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h2>Tabitha</h2>
+                    <h3>Intern</h3><i class"material_icons">&#128210;</i>
+                </div>
+            </div>    
+            <div class="card-body intern-info">
+                <p>ID: 9</p>
+                <p>Email: <a href="mailto:tabitha@company.org">tabitha@company.org</a></p>
+                <p>School: University</p>
+            </div>
         </div>
     
+            </div>
         </section>
     </body>
     </html>
