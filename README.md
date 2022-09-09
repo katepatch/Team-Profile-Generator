@@ -2,12 +2,16 @@
 
 Module 10 Challenge
 
+This is a command line application that uses Node.js.  When running the aplication you can answer questions about who your employees are and what role they play in the company.  Once you have filled out your team an HTML page will render displaying all of your employees.  
+
 ## Table of Contents
 
 -[User Story](#user-story)</br>
 -[Acceptance Criteria](#acceptance-criteria)</br>
+-[Installation](#installation)</br>
 -[Tests](#tests)</br>
--[Links](#links)
+-[Links](#links)</br>
+-[Info](#info)
 
 ## USER STORY
 
@@ -35,6 +39,11 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 WHEN I decide to finish building my team</br>
 THEN I exit the application, and the HTML is generated
 
+## Installation
+
+Clone my [repository](https://github.com/katepatch/Team-Profile-Generator)</br>
+Install [Jest](https://www.npmjs.com/package/jest)</br>
+and [Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4)
 ## Tests
 
 Run `npm test` to run Jest
@@ -45,3 +54,9 @@ After the tests have passed you can run `node index.js` in the command line to s
 
 You can find my code on my [Github](https://github.com/katepatch/Team-Profile-Generator)</br>
 You can email me at kate.epatch@gmail.com
+
+## Info
+
+Link to [video](https://watch.screencastify.com/v/gL87erhN0lILCgIGXFtY)
+
+![screenshot](/assests/screenshot.png)
