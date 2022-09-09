@@ -61,7 +61,7 @@ htmlRenderer = data => {
         console.log(data[i].getRole());
         const employee = data[i];
         console.log(data[i]);
-        const role = employee.getRole(); //this is not a function error
+        const role = employee.getRole();
         
 
         if (role === "Manager") {
