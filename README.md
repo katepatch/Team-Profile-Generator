@@ -44,6 +44,7 @@ THEN I exit the application, and the HTML is generated
 Clone my [repository](https://github.com/katepatch/Team-Profile-Generator)</br>
 Install [Jest](https://www.npmjs.com/package/jest)</br>
 and [Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4)
+
 ## Tests
 
 Run `npm test` to run Jest
