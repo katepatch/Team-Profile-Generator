@@ -2,14 +2,14 @@ const genManager = manager => {
     return `
         <div class="card manager-card">
             <div class="card-header">
-                <h2>${manager.name}</h2>
+                <h2>${manager.getName()}</h2>
                 <h3>Manager</h3>
             </div>        
         <div class="card-body manager-info">
             <ul class="manager-list">
-                <li>ID: ${manager.id}</li>
+                <li>ID: ${manager.getId()}</li>
                 <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
-                <li>Office Number: ${manager.officeNumber}</li>
+                <li>Office Number: ${manager.getOfficeNumber()}</li>
             </ul>
         </div>
         </div>
@@ -20,16 +20,16 @@ const genEngineer = engineer => {
     return `
         <div class="card engineer">
             <div class="card-header">
-                <h2>${engineer.name}</h2>
+                <h2>${engineer.getName()}</h2>
                 <h3>Engineer</h3>
             </div>
         </div>
 
         <div class="card-body engineer-info">
             <ul class="engineer-list">
-                <li>ID: ${engineer.id}</li>
-                <li>Email: <a herf="mailto:{{ email }}>${engineer.email}</a></li>
-                <li>Github Username: <a href="https://github.com//{{ github }}" target="_blank">${engineer.github}</a></li>
+                <li>ID: ${engineer.getId()}</li>
+                <li>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                <li>Github Username: <a href="https://github.com//{{ github }}" target="_blank">${engineer.getGithub()}</a></li>
             </ul>
         </div>
     `
@@ -39,16 +39,16 @@ const genIntern = intern => {
     return `
         <div class="card intern">
             <div class="card-header>
-                <h2>${intern.name}</h2>
+                <h2>${intern.getName()}</h2>
                 <h3>Intern</h3>
             </div>
         </div>
 
         <div class="card-body intern-info">
             <ul class="intern-list">
-                <li>ID: ${intern.id}</li>
-                <li>Email: <a herf="mailto:{{ email }}>${intern.email}</a></li>
-                <li>School: ${intern.school}</li>
+                <li>ID: ${intern.getId()}</li>
+                <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+                <li>School: ${intern.getSchool()}</li>
             </ul>
         </div>
     `
